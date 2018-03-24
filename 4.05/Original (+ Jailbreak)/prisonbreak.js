@@ -1,0 +1,34 @@
+function writePrisonBreak(p, addr) {
+	p.write4(addr.add32(0x00000000), 0x193d8d48);
+	p.write4(addr.add32(0x00000004), 0x31000000);
+	p.write4(addr.add32(0x00000008), 0x0003e8f6);
+	p.write4(addr.add32(0x0000000c), 0xc0310000);
+	p.write4(addr.add32(0x00000010), 0xc0c748c3);
+	p.write4(addr.add32(0x00000014), 0x0000000b);
+	p.write4(addr.add32(0x00000018), 0x0fca8949);
+	p.write4(addr.add32(0x0000001c), 0x9090c305);
+	p.write4(addr.add32(0x00000020), 0x08478b48);
+	p.write4(addr.add32(0x00000024), 0x000082b9);
+	p.write4(addr.add32(0x00000028), 0x788b48c0);
+	p.write4(addr.add32(0x0000002c), 0x708b4848);
+	p.write4(addr.add32(0x00000030), 0x48320f40);
+	p.write4(addr.add32(0x00000034), 0xc720e2c1);
+	p.write4(addr.add32(0x00000038), 0x00000446);
+	p.write4(addr.add32(0x0000003c), 0x89480000);
+	p.write4(addr.add32(0x00000040), 0x968b48d1);
+	p.write4(addr.add32(0x00000044), 0x00000118);
+	p.write4(addr.add32(0x00000048), 0xc7c10948);
+	p.write4(addr.add32(0x0000004c), 0x00000846);
+	p.write4(addr.add32(0x00000050), 0x46c70000);
+	p.write4(addr.add32(0x00000054), 0x00000014);
+	p.write4(addr.add32(0x00000058), 0x0002c700);
+	p.write4(addr.add32(0x0000005c), 0x48000000);
+	p.write4(addr.add32(0x00000060), 0x74e0918b);
+	p.write4(addr.add32(0x00000064), 0x894800c1);
+	p.write4(addr.add32(0x00000068), 0x8b483056);
+	p.write4(addr.add32(0x0000006c), 0xd5e72081);
+	p.write4(addr.add32(0x00000070), 0x47894801);
+	p.write4(addr.add32(0x00000074), 0x47894820);
+	p.write4(addr.add32(0x00000078), 0xc3c03118);
+	p.write4(addr.add32(0x0000007c), 0x90909090);
+}
