@@ -1,4 +1,4 @@
-Edición online: https://fabrebatalla18.github.io/
+Edición online: https://fabrebatalla18.github.io
 
 4.05:
 - APPtoUSB v14: https://github.com/stooged/AppToUsb-405
