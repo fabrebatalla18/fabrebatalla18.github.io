@@ -1,7 +1,7 @@
 Edición online: https://fabrebatalla18.github.io
 
 4.05:
-- APPtoUSB v14: https://github.com/stooged/AppToUsb-405
+- APPtoUSB v15: https://github.com/stooged/AppToUsb-405
 - DB-SG Backup: https://github.com/stooged/DB_SG_Backup
 - Dumper-XVortex v1.6: https://github.com/xvortex/ps4-dumper-vtx/tree/1.6
 - FTP-XVortex v1.1: https://github.com/xvortex/ps4-ftp-vtx/tree/1.1
@@ -15,7 +15,7 @@ Edición online: https://fabrebatalla18.github.io
 - Uninstall Update Blocker: https://github.com/LightningMods/PS4-HEN-Update-Blocker-Payload
 
 4.55:
-- APPtoUSB v14: https://github.com/stooged/AppToUsb-455
+- APPtoUSB v15: https://github.com/stooged/AppToUsb-455
 - DB-SG Backup: https://github.com/stooged/DB_SG_Backup
 - Dumper-XVortex v1.7: https://github.com/xvortex/ps4-dumper-vtx
 - FTP-XVortex v1.2: https://github.com/xvortex/ps4-ftp-vtx
