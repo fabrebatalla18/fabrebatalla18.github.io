@@ -1,7 +1,7 @@
 Edición online: https://fabrebatalla18.github.io
 
 4.05:
-- APPtoUSB v15: https://github.com/stooged/AppToUsb-405
+- APPtoUSB v17: https://github.com/stooged/AppToUsb-405
 - DB-SG Backup: https://github.com/stooged/DB_SG_Backup
 - Dumper-XVortex v1.6: https://github.com/xvortex/ps4-dumper-vtx/tree/1.6
 - FTP-XVortex v1.1: https://github.com/xvortex/ps4-ftp-vtx/tree/1.1
@@ -15,7 +15,7 @@ Edición online: https://fabrebatalla18.github.io
 - Uninstall Update Blocker: https://github.com/LightningMods/PS4-HEN-Update-Blocker-Payload
 
 4.55:
-- APPtoUSB v15: https://github.com/stooged/AppToUsb-455
+- APPtoUSB v17: https://github.com/stooged/AppToUsb-455
 - DB-SG Backup: https://github.com/stooged/DB_SG_Backup
 - Dumper-XVortex v1.7: https://github.com/xvortex/ps4-dumper-vtx
 - FTP-XVortex v1.2: https://github.com/xvortex/ps4-ftp-vtx
@@ -26,3 +26,15 @@ Edición online: https://fabrebatalla18.github.io
 - Original (Port 9020): https://github.com/Cryptogenic/PS4-4.55-Kernel-Exploit
 - Update Blocker: https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN
 - Uninstall Update Blocker: https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN
+
+5.05:
+- APPtoUSB v17: https://github.com/stooged/AppToUsb-50X (sin compilar, source para 5.0x)
+- DB-SG Backup: https://github.com/stooged/DB_SG_Backup-50X (sin compilar, source para 5.0x)
+- Dumper-XVortex v1.7: https://github.com/xvortex/ps4-dumper-vtx (sin compilar, source para 5.01)
+- FTP-XVortex v1.2: https://github.com/xvortex/ps4-ftp-vtx (sin compilar, source para 5.01)
+- HEN-XVortex v1.4: https://github.com/xvortex/ps4-hen-vtx (sin compilar, source para 5.01)
+- HEN-VR: ...
+- Enable Browser: ...
+- Original (Port 9020): ...
+- PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-5.0x-Update-Blocker-HEN (sin compilar, source para 5.0x)
+- PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP (sin compilar, source para 5.0x)
