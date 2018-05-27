@@ -35,6 +35,8 @@ Edición online: https://fabrebatalla18.github.io
 - HEN-XVortex v1.4: https://github.com/xvortex/ps4-hen-vtx (sin compilar, source para 5.01)
 - HEN-VR: ...
 - Enable Browser: ...
-- Original (Port 9020): ...
+- Original (Port 9020): https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
+- MIRA + HEN: https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
+- MIRA: https://github.com/OpenOrbis/mira-project
 - PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-5.0x-Update-Blocker-HEN (sin compilar, source para 5.0x)
 - PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP (sin compilar, source para 5.0x)
