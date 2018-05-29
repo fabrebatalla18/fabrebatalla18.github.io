@@ -30,9 +30,9 @@ Edición online: https://fabrebatalla18.github.io
 5.05:
 - APPtoUSB v17: https://github.com/stooged/AppToUsb-50X (sin compilar, source para 5.0x)
 - DB-SG Backup: https://github.com/stooged/DB_SG_Backup-50X (sin compilar, source para 5.0x)
-- Dumper-XVortex v1.7: https://github.com/xvortex/ps4-dumper-vtx (sin compilar, source para 5.01)
-- FTP-XVortex v1.2: https://github.com/xvortex/ps4-ftp-vtx (sin compilar, source para 5.01)
-- HEN-XVortex v1.4: https://github.com/xvortex/ps4-hen-vtx (sin compilar, source para 5.01)
+- Dumper-XVortex v1.8: https://github.com/xvortex/ps4-dumper-vtx
+- FTP-XVortex v1.3: https://github.com/xvortex/ps4-ftp-vtx
+- HEN-XVortex v1.6: https://github.com/xvortex/ps4-hen-vtx
 - HEN-VR: ...
 - Enable Browser: ...
 - Original (Port 9020): https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
