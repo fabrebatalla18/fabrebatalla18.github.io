@@ -28,15 +28,13 @@ Edición online: https://fabrebatalla18.github.io
 - Uninstall Update Blocker: https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN
 
 5.05:
-- APPtoUSB v17: https://github.com/stooged/AppToUsb-50X (sin compilar, source para 5.0x)
-- DB-SG Backup: https://github.com/stooged/DB_SG_Backup-50X (sin compilar, source para 5.0x)
+- APPtoUSB v1 Beta: https://github.com/stooged/AppToUsb-50X
+- DB-SG Backup: https://github.com/stooged/DB_SG_Backup-50X
 - Dumper-XVortex v1.8: https://github.com/xvortex/ps4-dumper-vtx
 - FTP-XVortex v1.3: https://github.com/xvortex/ps4-ftp-vtx
 - HEN-XVortex v1.6: https://github.com/xvortex/ps4-hen-vtx
-- HEN-VR: ...
 - Enable Browser: ...
-- Original (Port 9020): https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
 - MIRA + HEN: https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
 - MIRA: https://github.com/OpenOrbis/mira-project
-- PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-5.0x-Update-Blocker-HEN (sin compilar, source para 5.0x)
-- PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP (sin compilar, source para 5.0x)
+- PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-Update-Blocker-HEN
+- PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP
