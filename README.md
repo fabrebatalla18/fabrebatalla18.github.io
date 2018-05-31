@@ -38,3 +38,4 @@ Edición online: https://fabrebatalla18.github.io
 - MIRA: https://github.com/OpenOrbis/mira-project
 - PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-Update-Blocker-HEN
 - PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP
+- reactPSPLUS: https://github.com/Thunder07/reactPSPLUS
