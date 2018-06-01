@@ -39,3 +39,4 @@ Edición online: https://fabrebatalla18.github.io
 - PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-Update-Blocker-HEN
 - PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP
 - reactPSPLUS: https://github.com/Thunder07/reactPSPLUS
+- Linux Loader: https://github.com/valentinbreiz/PS4-Linux-Loader/tree/5.05
