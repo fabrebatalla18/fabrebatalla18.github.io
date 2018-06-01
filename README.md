@@ -29,7 +29,7 @@ Edición online: https://fabrebatalla18.github.io
 
 5.05:
 - APPtoUSB v1: https://github.com/stooged/AppToUsb-50X
-- DB-SG Backup: https://github.com/stooged/DB_SG_Backup-50X
+- DB-SG Backup v2: https://github.com/stooged/DB_SG_Backup-50X
 - Dumper-XVortex v1.8: https://github.com/xvortex/ps4-dumper-vtx
 - FTP-XVortex v1.3: https://github.com/xvortex/ps4-ftp-vtx
 - HEN-XVortex v1.6: https://github.com/xvortex/ps4-hen-vtx
