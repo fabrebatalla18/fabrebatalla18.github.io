@@ -40,3 +40,5 @@ Edición online: https://fabrebatalla18.github.io
 - PS4 System 5.0x RW-FTP: https://github.com/LightningMods/PS4-System-RW-FTP
 - reactPSPLUS: https://github.com/Thunder07/reactPSPLUS
 - Linux Loader: https://github.com/valentinbreiz/PS4-Linux-Loader/tree/5.05
+- Bin Loader: http://ps4exploits.darksoftware.xyz/5.05/Bin-Loader/
+- FTP-RW: http://ps4exploits.darksoftware.xyz/5.05/FTP-RW/
