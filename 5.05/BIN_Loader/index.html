@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PS4 5.05 (Bin Loader)</title>
+  <title>PS4Brew 5.05</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     .loader {
@@ -77,6 +77,7 @@
     function awaitpl() {
       document.getElementById("loader").style.display = "none";
       document.getElementById("awaiting").style.display = "block";
+      ping("/success");
     }
 
     function fail(info) {
@@ -89,6 +90,10 @@
 
   <div id="awaiting" class="info" style="display:none;">
     Awaiting Payload...
+  </div>
+
+  <div id="allset" class="info" style="display:none;">
+    You're all set!
   </div>
 
   <div id="fail" class="info" style="display:none;">
@@ -112,6 +117,7 @@
   <script src="./syscalls.js"></script>
   <script src="./expl.js"></script>
   <script src="./userland.js"></script>
+  <script src="./ping.js"></script>
   <pre id="console"></pre>
 </body>
 </html>
