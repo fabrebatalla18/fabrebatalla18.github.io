@@ -1,30 +1,4 @@
 CACHE MANIFEST
-./index.html
-./APPtoUSB/index.html
-./Backup/index.html
-./Dumper/index.html
-./XVortex-HEN/index.html
-./FTP/index.html
-./MIRACFW/index.html
-./MIRACFW/expl.js
-./MIRACFW/homebrew.js
-./MIRACFW/kernel.js
-./MIRACFW/mira.js
-./MIRACFW/rop.js
-./MIRACFW/syscalls.js
-./MIRACFW/userland.js
-./Update Blocker/index.html
-./reactPSPLUS/index.html
-./reactPSPLUS_Undo/index.html
-./BIN_Loader/index.html
-./BIN_Loader/expl.js
-./BIN_Loader/kernel.js
-./BIN_Loader/ping.js
-./BIN_Loader/rop.js
-./BIN_Loader/syscalls.js
-./BIN_Loader/userland.js
-./FTP-RW/index.html
-./Linux_Loader/index.html
-../index/tcc_l.combined.1.0.6.min.js
-../index/style.css
-../index/script.js
+index.html
+script.js
+script.js
