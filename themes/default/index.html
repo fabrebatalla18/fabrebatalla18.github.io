@@ -1,31 +1,44 @@
 <!DOCTYPE html>
-<html manifest="offline.manifest"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+<meta charset="utf-8">
+<title>*</title>
+<link rel="stylesheet" href="/themes/default/style.css">
+<script src="/themes/default/script.js"></script>
+<script>
+var data = JSON.parse('{{EXPLOITS}}');
+var exploitBase = "/exploits/";
 
-<title>Exploit Selection | PS4 Exploit Host by Al-Azif</title>
-<link rel="stylesheet" href="../index/style.css">
-<script src="../index/script.js"></script><style></style>
+var firmwares = getFirmwares();
 
+window.onload = function() {
+  if(window.location.hash) {
+    firmwareSelected();
+  } else {
+    resetPage();
+  }
+}
+</script>
 </head>
 <body onhashchange="firmwareSelected()">
 <div id="wrapper">
 <div id="contentWrapper">
 <div id="contentHeader">
-<h1 id="title">Exploit Selection (Port 9023)</h1>
+<div><h1 id="title">*</h1><a href="/themes/default/about.html" class="about">About</a></div>
 </div>
 <div id="content">
 <div id="contentBody">
-<h2 id="header">1.76</h2>
-<div id="buttons"><a href="./Playground/index.html"><button class="btn btn-main">Playground</button></a>
-<a href="../index.html"><button class="btn btn-main">[Back]</button></a>
+<h2 id="header">*</h2>
+<div id="buttons"></div>
 </div>
 </div>
 </div>
 </div>
-</div>
-
-<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'}),_trfd.push({'ap':'cpsh'},{'server':'p3plcpnl0967'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="../index/tcc_l.combined.1.0.6.min.js"></script>
+</body>
+</html>
 <!--
 Copyright (c) 2017-2018 Al Azif, https://github.com/Al-Azif/ps4-exploit-host
+
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
@@ -33,8 +46,10 @@ without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
 the following conditions:
+
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
+
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -42,4 +57,4 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
---></body></html>
+-->
