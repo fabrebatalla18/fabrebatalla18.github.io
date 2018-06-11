@@ -1,44 +1,36 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html manifest="offline.manifest">
 <head>
-<meta charset="utf-8">
-<title>*</title>
-<link rel="stylesheet" href="/themes/default/style.css">
-<script src="/themes/default/script.js"></script>
-<script>
-var data = JSON.parse('{{EXPLOITS}}');
-var exploitBase = "/exploits/";
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-var firmwares = getFirmwares();
+<title>Firmware Selection | PS4 Exploit Host by Al-Azif</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script><style></style>
 
-window.onload = function() {
-  if(window.location.hash) {
-    firmwareSelected();
-  } else {
-    resetPage();
-  }
-}
-</script>
 </head>
 <body onhashchange="firmwareSelected()">
 <div id="wrapper">
 <div id="contentWrapper">
 <div id="contentHeader">
-<div><h1 id="title">*</h1><a href="/themes/default/about.html" class="about">About</a></div>
+<h1 id="title">Firmware Selection</h1>
 </div>
 <div id="content">
 <div id="contentBody">
-<h2 id="header">*</h2>
-<div id="buttons"></div>
+<h2 id="header">Firmware</h2>
+<div id="buttons">
+<a href="./1.01/index.html"><button class="btn btn-main">1.01</button></a>
+<a href="./1.76/index.html"><button class="btn btn-main">1.76</button></a>
+<a href="./4.05/index.html"><button class="btn btn-main">4.05</button></a>
+<br>
+<a href="./4.55/index.html"><button class="btn btn-main">4.55</button></a>
+<a href="./5.05/index.html"><button class="btn btn-main">5.05</button></a>
 </div>
 </div>
 </div>
 </div>
-</body>
-</html>
+</div>
 <!--
 Copyright (c) 2017-2018 Al Azif, https://github.com/Al-Azif/ps4-exploit-host
-
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
@@ -46,10 +38,8 @@ without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
 permit persons to whom the Software is furnished to do so, subject to
 the following conditions:
-
 The above copyright notice and this permission notice shall be
 included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
 EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
 MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -57,4 +47,4 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
+--></body></html>
