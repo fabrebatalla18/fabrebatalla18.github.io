@@ -2,32 +2,3 @@ CACHE MANIFEST
 index.html
 script.js
 style.css
-5.05/index.html
-5.05/script.js
-5.05/style.css
-5.05/APPtoUSB/index.html
-5.05/Backup/index.html
-5.05/BIN_Loader/index.html
-5.05/BIN_Loader/expl.js
-5.05/BIN_Loader/kernel.js
-5.05/BIN_Loader/ping.js
-5.05/BIN_Loader/rop.js
-5.05/BIN_Loader/syscalls.js
-5.05/BIN_Loader/userland.js
-5.05/Dumper/index.html
-5.05/FTP/index.html
-5.05/FTP-RW/index.html
-5.05/Linux_Loader/index.html
-5.05/MIRACFW/index.html
-5.05/MIRACFW/expl.js
-5.05/MIRACFW/homebrew.js
-5.05/MIRACFW/kernel.js
-5.05/MIRACFW/mira.js
-5.05/MIRACFW/rop.js
-5.05/MIRACFW/syscalls.js
-5.05/MIRACFW/userland.js
-5.05/reactPSPLUS/index.html
-5.05/reactPSPLUS_Undo/index.html
-5.05/Update Blocker/index.html
-5.05/Update Blocker_Extreme/index.html
-5.05/XVortex-HEN/index.html
