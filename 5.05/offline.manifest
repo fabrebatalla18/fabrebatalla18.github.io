@@ -1,10 +1,7 @@
 CACHE MANIFEST
-/index.html
-/index/script.js
-/index/style.css
-/index.html
-/script.js
-/style.css
+index.html
+script.js
+style.css
 /APPtoUSB/index.html
 /Backup/index.html
 /BIN_Loader/expl.js
