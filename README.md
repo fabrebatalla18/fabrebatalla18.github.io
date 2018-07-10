@@ -1,4 +1,4 @@
-Edición online: https://fabrebatalla18.github.io
+Edici�n online: https://fabrebatalla18.github.io
 
 4.05:
 - APPtoUSB v17: https://github.com/stooged/AppToUsb-405
@@ -28,12 +28,13 @@ Edición online: https://fabrebatalla18.github.io
 - Uninstall Update Blocker: https://github.com/LightningMods/PS4-4.55-Update-Blocker-HEN
 
 5.05:
-- APPtoUSB v1: https://github.com/stooged/AppToUsb-50X
-- DB-SG Backup v2: https://github.com/stooged/DB_SG_Backup-50X
+- APPtoUSB v3: https://github.com/stooged/AppToUsb-50X
+- DB-SG Backup v3: https://github.com/stooged/DB_SG_Backup-50X
+- History Blocker v2: https://github.com/stooged/History-Blocker
+- HEN-VR: https://github.com/stooged/Enable-VR-50X
 - Dumper-XVortex v1.8: https://github.com/xvortex/ps4-dumper-vtx
 - FTP-XVortex v1.3: https://github.com/xvortex/ps4-ftp-vtx
-- HEN-XVortex v1.6: https://github.com/xvortex/ps4-hen-vtx
-- Enable Browser: ...
+- HEN-XVortex v1.7: https://github.com/xvortex/ps4-hen-vtx
 - MIRA + HEN: https://github.com/Cryptogenic/PS4-5.05-Kernel-Exploit
 - MIRA: https://github.com/OpenOrbis/mira-project
 - PS4 5.0x Update-Blocker and HEN: https://github.com/LightningMods/PS4-Update-Blocker-HEN

@@ -1,0 +1,19 @@
+CACHE MANIFEST
+
+CACHE:
+/exploits/1.76/Playground/browser.html
+/exploits/1.76/Playground/index.html
+/exploits/1.76/Playground/nopayload
+/exploits/1.76/Playground/README.md
+/exploits/1.76/Playground/css/main.css
+/exploits/1.76/Playground/js/code.js
+/exploits/1.76/Playground/js/exploit.js
+/exploits/1.76/Playground/js/gadgets.js
+/exploits/1.76/Playground/js/just-rop.js
+/exploits/1.76/Playground/js/network.js
+/exploits/1.76/Playground/js/utils.js
+
+NETWORK:
+*
+
+# Hash: AB90AB8A59808A5C81893F9F7BB1BB16
