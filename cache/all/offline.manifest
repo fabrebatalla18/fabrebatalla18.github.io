@@ -1,6 +1,15 @@
 CACHE MANIFEST
 
 CACHE:
+/
+index.html
+/index.html
+/themes/default/about.html
+/themes/default/image.png
+/themes/default/index.html
+/themes/default/ps4-updatefeature.html
+/themes/default/script.js
+/themes/default/style.css
 /exploits/1.01/Playground/browser.html
 /exploits/1.01/Playground/index.html
 /exploits/1.01/Playground/nopayload
@@ -239,17 +248,16 @@ CACHE:
 /exploits/5.05/FTP-XVortex%20v1.3/index.html
 /exploits/5.05/HEN-XVortex%20v1.7/index.html
 /exploits/5.05/History%20Blocker%20v2/index.html
-/exploits/5.05/Linux%20Loader/index.html
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/expl.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/homebrew.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/index.html
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/js_shellcode.py
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/kernel.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/mira.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/README.md
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/rop.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/syscalls.js
-/exploits/5.05/MIRA%20CFW%20+%20HEN%20v1/userland.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/expl.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/homebrew.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/index.html
+/exploits/5.05/MIRA%20CFW-HEN%20v1/js_shellcode.py
+/exploits/5.05/MIRA%20CFW-HEN%20v1/kernel.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/mira.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/README.md
+/exploits/5.05/MIRA%20CFW-HEN%20v1/rop.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/syscalls.js
+/exploits/5.05/MIRA%20CFW-HEN%20v1/userland.js
 /exploits/5.05/reactPSPLUS%20%28undo%29%20v0.1/index.html
 /exploits/5.05/reactPSPLUS%20v0.1/index.html
 /exploits/5.05/Uninstall%20Update%20Blocker/index.html
@@ -260,4 +268,4 @@ CACHE:
 NETWORK:
 *
 
-# Hash: E4CD37A2F5990EF48C1B8FA90EB65A16
+# Hash: A181A603769C1F98AD927E7367C7AA51

@@ -1,6 +1,15 @@
 CACHE MANIFEST
 
 CACHE:
+/
+index.html
+/index.html
+/themes/default/about.html
+/themes/default/image.png
+/themes/default/index.html
+/themes/default/ps4-updatefeature.html
+/themes/default/script.js
+/themes/default/style.css
 /exploits/1.01/Playground/browser.html
 /exploits/1.01/Playground/index.html
 /exploits/1.01/Playground/nopayload
@@ -16,4 +25,4 @@ CACHE:
 NETWORK:
 *
 
-# Hash: 6C1A16B9B7E564C324062017BE3E384D
+# Hash: D5A637CD11AA722A9B4C922C7B740A63

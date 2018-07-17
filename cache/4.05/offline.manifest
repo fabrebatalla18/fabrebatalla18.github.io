@@ -1,6 +1,15 @@
 CACHE MANIFEST
 
 CACHE:
+/
+index.html
+/index.html
+/themes/default/about.html
+/themes/default/image.png
+/themes/default/index.html
+/themes/default/ps4-updatefeature.html
+/themes/default/script.js
+/themes/default/style.css
 /exploits/4.05/APPtoUSB%20v17/AppToUsb.ini
 /exploits/4.05/APPtoUSB%20v17/expl.js
 /exploits/4.05/APPtoUSB%20v17/fix.js
@@ -116,4 +125,4 @@ CACHE:
 NETWORK:
 *
 
-# Hash: 60DFC1FC81867CAB6DA20EA3FEAF04F3
+# Hash: 196605F2B60870E60CB5EAD3EE44712B
